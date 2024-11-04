@@ -8,11 +8,11 @@ export default function Navigation() {
   ]
   return (
     <nav className="w-1/3">
-      <ul className="flex gap-4">
+      <ul className="flex justify-between gap-4">
         {links.map((link) => (
           <li
             key={link.name}
-            className="hover:font-semibold"
+            className="hover:font-semibold hover:text-primary transition-all"
           >
             <Link href={link.link}>{link.name}</Link>
           </li>

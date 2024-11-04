@@ -3,15 +3,15 @@ import localFont from 'next/font/local'
 import './globals.css'
 import Header from './components/Header'
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const interSans = localFont({
+  src: './fonts/InterVF.ttf',
+  variable: '--font-inter-sans',
+  weight: '100 600 700 900',
 })
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+const interItalic = localFont({
+  src: './fonts/InterItalicVF.ttf',
+  variable: '--font-inter-italic',
+  weight: '100 600 700 900',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${interSans.variable} ${interItalic.variable} antialiased`}>
         <Header></Header>
         <main className="px-10">{children}</main>
       </body>
